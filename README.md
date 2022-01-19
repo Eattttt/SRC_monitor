@@ -12,5 +12,5 @@ python SRC_monitor.py
 ```
 
 # todo
-[] hackone and bugbounty
-[] 自动导出目标的域名和IP
+* 增加更多的src
+* 自动导出目标的域名和IP
