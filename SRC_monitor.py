@@ -63,7 +63,7 @@ def get_butian_src():
         title = "补天有 "+str(len(new))+"个新项目"
         msg = []
         for x in new:
-            msg.append(x['company_name'])
+            msg.append(x[1])
         send_news(title,str(msg))
 
 # 获取火线src里的新项目
@@ -126,7 +126,7 @@ if __name__ == "__main__":
     # print("init")
     create_database()
     # print("initial done")
-    send_news("src_monitor","连接成功")
+    # send_news("src_monitor","连接成功")
     try:
         while True:
             get_butian_src()
