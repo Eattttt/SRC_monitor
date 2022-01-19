@@ -49,6 +49,7 @@ def load_config():
 
 # 获取补天src里的新项目
 def get_butian_src():
+    print("get butian src")
     platform = "butian"
     post_data = post('https://www.butian.net/Reward/corps')
     data = json.loads(post_data.text)
@@ -57,7 +58,7 @@ def get_butian_src():
     for x in data:
         if len(find_compand_by_id(x['company_id'],platform)) == 0:
             new.append([x['company_id'],x['company_name'],"1641041268","1641041268"])
-            # print("补天 新增资产 {}".format(x['company_name']))
+            print("补天 新增资产 {}".format(x['company_name']))
     if len(new) != 0:
         insert_new_compand(new,platform)
         title = "补天有 "+str(len(new))+"个新项目"
@@ -68,6 +69,7 @@ def get_butian_src():
 
 # 获取火线src里的新项目
 def get_huoxian_src():
+    print("get huoxian src")
     platform= "huoxian"
     page = 1
     headers = {'Content-Type': 'application/json'}
