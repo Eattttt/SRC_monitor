@@ -1,6 +1,5 @@
 import sqlite3
 import time
-from turtle import pos
 from requests import post
 import yaml
 import json
